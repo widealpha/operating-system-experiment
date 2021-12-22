@@ -140,15 +140,15 @@ Append(char *from, char *to, int half)
 //	result = openFile->WriteAt(buffer, amountRead, start);
 	result = openFile->Write(buffer, amountRead);
 //	printf("result of write: %d\n", result);
-	ASSERT(result == amountRead);
+//	ASSERT(result == amountRead);
 //	start += amountRead;
 //	ASSERT(start == openFile->Length());
     }
     delete [] buffer;
 
 //  Write the inode back to the disk, because we have changed it
-//  openFile->WriteBack();
-//  printf("inodes have been written back\n");
+  openFile->WriteBack();
+  printf("inodes have been written back\n");
     
 // Close the UNIX and the Nachos files
     delete openFile;
