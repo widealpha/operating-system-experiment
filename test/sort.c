@@ -10,7 +10,7 @@
 #include "syscall.h"
 
 /* size of physical memory; with code, we'll run out of space!*/
-#define ARRAYSIZE 1024
+#define ARRAYSIZE 128
 
 int A[ARRAYSIZE];
 
